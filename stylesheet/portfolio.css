@@ -6,7 +6,7 @@ body {
 
 /* Heading 1 elements */
 h1 {
-    font-family: "Trebuchet MS", Optima; /* Sets the font family of all h1 headings */
+    font-family: 'Source Code Pro', monospace; /* Sets the font family of all h1 headings */
     text-align: center; /* Centering all h1 elements */
     margin-top: 3%; /* Adds a small margin above h1 elements */
    
@@ -75,6 +75,19 @@ img {
 footer {
     padding: 2%; /* This gives the footer padding that is equal to 2% of the width of the element's area */
     background-color: white;
+    color: black;
+    text-align: center;
+    
+}
+
+.footer-group {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+}
+.footer-item {
+    border: solid black;
+    text-align:center;
 }
 /***** END OF GENERAL STYLING *****/
 
@@ -93,6 +106,10 @@ footer {
 .page-title a:hover, .page-title a:visited, .page-title a:link, .page-title a:active {
     text-decoration: none;
 }
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+    color: black;
+}
 .page-title {
     color:white;
     padding-left: 15px;
@@ -103,7 +120,7 @@ footer {
     display:flex;
 }
 .color-1 {
-    background-color: blue;
+    background-color: blueviolet;
     flex: 1;
 }
 
@@ -113,7 +130,7 @@ footer {
 }
 
 .color-3 {
-    background-color: salmon;
+    background-color: rgb(0, 197, 197);
     flex: 1;
 }
 .color-4 {
@@ -134,6 +151,7 @@ footer {
     z-index: 1; /* This ensures other elements don't display over the navbar */
     -webkit-animation: move-nav .75s; /* This applies the moveNav animation below for Safari 4.0 - 8.0 */
     animation: move-nav 0s; /* This applies the moveNav animation for all other browsers */
+    padding-top: 7px;
 
    
 }
@@ -150,7 +168,7 @@ footer {
 .navbar a {
     float: left; /* This specifies that the text floats on the left on the navbar */
     display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
-    color: rgb(209, 209, 209); /* This is the font color for text on our navbar */
+    color: rgb(255, 255, 255); /* This is the font color for text on our navbar */
     padding: 14px 16px; /* This adds padding around our text */
     padding-top: 0;
     padding-bottom: 0;
@@ -182,6 +200,7 @@ footer {
 /* Navbar hover effects */
 .navbar a:hover {
     color: white; /* This defines the font color that will display when navbar a elements are hovered over */
+    font-weight: bold;
 }
 
 
@@ -208,7 +227,7 @@ footer {
 
 /* Texts over the video */
 .video-text {
-    background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
+    background: rgba(0, 0, 0, 0.9); /* This provides a semi-transparent background for the text to sit over */
     color: white; /* Makes the font color white */
     width: 100%; /* Ensures the video-text container fills the width of the video */
     padding: 20px; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
