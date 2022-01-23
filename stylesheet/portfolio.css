@@ -6,18 +6,14 @@ body {
 
 /* Heading 1 elements */
 h1 {
-    text-transform: uppercase; /* Capitalizing all h1 headings */
     font-family: "Trebuchet MS", Optima; /* Sets the font family of all h1 headings */
     text-align: center; /* Centering all h1 elements */
     margin-top: 3%; /* Adds a small margin above h1 elements */
-    color: #1a1a1a; 
+   
 }
 
-/* Heading 1 element hover effect */
-h1:hover {
-    filter: grayscale(5%); /* Adds a slightly gray filter to the h1 headings when hovered over */
-    transform: scale(1.1); /* When the h1 elements are hovered over they increase in size by 1.1 */
-    transition: transform 1s; /* This causes the transformation to last 1 second */
+.quote {
+    font-family: 'Source Code Pro', monospace;
 }
 
 /* Styling for portfolio title text */
@@ -27,7 +23,7 @@ h1:hover {
 
 /* Paragraph elements */
 p {
-    font-family: Perpetua, Rockwell Extra Bold;
+    font-family: "Trebuchet MS", Optima;
     text-align: justify; /* Justify text within paragraph elements */
     letter-spacing: 1px; /* This expands the text slightly */
     font-size: 20px;
@@ -35,28 +31,19 @@ p {
     padding-right: 20px; /* Adds padding to the right of the paragraph element */
 }
 
-/* Paragraph element hover effect */
-p:hover {
-    transition: transform 1s; /* This makes the transform effect last 1 second */
-	transform: scale(1.01); /* This makes the paragraphs increase slightly in size when hovered over */
-}
+
 
 /* Center class - this applies to all elements with the class "center" */
 .center {
     text-align: center; /* This center aligns the text */
 }
 
-/* Center class hover effect - This only affects the quote, github link, and footer */
-.center:hover {
-    transition: transform 2s; /* This makes the transform effect last 2 seconds */
-    transform: scale(1.1); /* This makes the elements with class "center" increase in size by 1.1 when hovered over */
-}
 
 /* Anchor elements */
-a {
-    color: blue; /* This ensures all links are blue */
-}
-
+     /*   a {
+            color: blue; /* This ensures all links are blue */ 
+     /*    }
+        
 /* Quotation elements */
 q {
     font-style: italic; /* This makes the quote italicized */
@@ -73,12 +60,7 @@ img {
     margin-right: auto;
 }
 
-/* Image element hover effects */
-img:hover {
-	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
-    transition: transform 1s; /* Transition lasts 1 second */
-	transform: scale(1.1); /* Image is increased slightly when hovered over */
-}
+
 
 /* The @media rule is used in media queries to apply different styles for different media/types of devices */
 /* On screens 576px and smaller the images will be 100px tall and centered vertically in the column */
@@ -96,69 +78,118 @@ footer {
 }
 /***** END OF GENERAL STYLING *****/
 
-/***** NAVBAR STYLING *****/
-.Navbar {
-    overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
-    background-color: black; /* This colors the navbar black */
-    position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
-    top: 0; /* This ensures no space is displayed above the navbar */
-    width: 100%; /* This makes the navbar span the entire width of the page */
-    z-index: 1; /* This ensures other elements don't display over the navbar */
-    -webkit-animation: moveNav 5s; /* This applies the moveNav animation below for Safari 4.0 - 8.0 */
-    animation: moveNav 5s; /* This applies the moveNav animation for all other browsers */
+/**** home flexbox styling ***/
+.home-container {
+    z-index: 1;
+    width: 100%;
+    top:0;
+    text-align: left;
+    position: fixed;
+    overflow: hidden;
+    display:flex;
+    background-color: rgba(41, 41, 41, 1);
+    height: 50px
+}
+.page-title a:hover, .page-title a:visited, .page-title a:link, .page-title a:active {
+    text-decoration: none;
+}
+.page-title {
+    color:white;
+    padding-left: 15px;
+    padding-right: 100px;
+}
+.color-strips{
+    flex-basis:100%;
+    display:flex;
+}
+.color-1 {
+    background-color: blue;
+    flex: 1;
 }
 
+.color-2 {
+    background-color:gray;
+    flex: 1;
+}
+
+.color-3 {
+    background-color: salmon;
+    flex: 1;
+}
+.color-4 {
+    background-color: white;
+    flex: .9;
+}
+
+
+/*** End home flexbox styling ***/
+
+
+/***** NAVBAR STYLING *****/
+.navbar {
+    overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
+    position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
+    top: 50px; 
+    width: 100%; /* This makes the navbar span the entire width of the page */
+    z-index: 1; /* This ensures other elements don't display over the navbar */
+    -webkit-animation: move-nav .75s; /* This applies the moveNav animation below for Safari 4.0 - 8.0 */
+    animation: move-nav 0s; /* This applies the moveNav animation for all other browsers */
+
+   
+}
+
+
+
 /* moveNav animation effect for moving the nav bar in from the left of the screen */
-@keyframes moveNav {
+@keyframes move-nav {
     from {left: -100vw;} /* The navbar is starting off screen to the left */
     to {left: 0vw;} /* This moves the navbar into place on the screen */
 }
 
 /* Navbar links */
-.Navbar a {
+.navbar a {
     float: left; /* This specifies that the text floats on the left on the navbar */
     display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
-    color: white; /* This is the font color for text on our navbar */
+    color: rgb(209, 209, 209); /* This is the font color for text on our navbar */
     padding: 14px 16px; /* This adds padding around our text */
+    padding-top: 0;
+    padding-bottom: 0;
     text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
-    font-family: Avant Garde, Helvetica; /* This specifies the font family for text on our navbar */
+    font-family: 'Source Code Pro', monospace; /* This specifies the font family for text on our navbar */
+    font-weight:100;
     font-size: 20px; /* This specifies the font size for text on our navbar */
     text-align: center; /* This centers the text within its container */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
-    -webkit-animation: moveNavText 5.75s; /* Animation for Safari 4.0 - 8.0 */
-    animation: moveNavText 5.75s; /* Applies the moveNavText animation for 5.75s */ 
+    -webkit-animation: move-nav-text .5s; /* Animation for Safari 4.0 - 8.0 */
+    animation: move-nav-text .5s; /* Applies the moveNavText animation for 5.75s */ 
 }
 
 /* moveNavText animation effect for moving the navbar text from above the view to the navbar */
-@keyframes moveNavText {
+@keyframes move-nav-text {
     from {top: -100vw;} /* This sets the navbar text 100% above the viewport */
     to {top: 0vw;} /* This lowers the navbar text onto the navbar */
 }
 
 /* Screens 576px and smaller will display navbar links equally distributed */
 @media screen and (max-width: 576px) {
-    .Navbar a{
-        width: 25%; /* This makes each link take up 1/4 of the navbar */
-        font-size: 12px;
+    .navbar a{
+        width: 33.3%; /* This makes each link take up 1/4 of the navbar */
+        font-size: 20px;
+        
     }
 }
 
 /* Navbar hover effects */
-.Navbar a:hover {
-    background-color: #f4f4f4; /* Defines the background color that will display when you hover over the link */
-    color: black; /* This defines the font color that will display when navbar a elements are hovered over */
-    font-weight: bold; /* This makes the text on the navbar bold when hovered over */
+.navbar a:hover {
+    color: white; /* This defines the font color that will display when navbar a elements are hovered over */
 }
 
-/* Navbar home button */
-.Navbar a.active { /* This targets the a element on the navbar with the "active" class */
-    background-color: darkgray;
-}
+
 /***** END OF NAVBAR STYLING *****/
 
 /***** VIDEO STYLING *****/
 /* Formatting for background video */
-#Typing_Video {
+#background-video {
     position: fixed; /* This fixes the video to the page */
     right: 0; /* This ensures there is no space between the edge of the video and the edge of the page */
     bottom: 0; /* This ensures no space between the bottom of the video and the bottom of the page */
@@ -168,20 +199,22 @@ footer {
 
 /* Screens that are 576px and smaller will not display the background video */
 @media screen and (max-width: 576px) {
-    #Typing_Video {
+    #background-video {
         display: none;
     }
-}
+    body {
+       background:black; }
+} 
 
 /* Texts over the video */
-.Video_Text {
+.video-text {
     background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
     color: white; /* Makes the font color white */
     width: 100%; /* Ensures the video-text container fills the width of the video */
     padding: 20px; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
-    -webkit-animation: moveVideoText 5.75s;
-    animation: moveVideoText 5.75s;
+    padding-top:100px;
+    
 }
 
 /* This animation effect causes the overlay video text to move up from the bottom of the page upon page load */

@@ -4,19 +4,40 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" />
-        <title>Your Name Here</title>
+        <title>mckaymoore.</title>
         <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
     </head>
 
+    <script>
+        $(document).ready(function(){
+           $(window).scrollTop(0);
+       });
+        </script>
+  
+  
     <!--Body-->
     <body class="Background">
         
         <!--Navbar-->
-        <div class="Navbar">
-            <a class="active" href="#Home">Home</a>
-            <a href="#About">About</a>
-            <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+       
+        <!-- name an home link -->
+        <div class="home-container">
+            <div class="page-title">
+                <a href="#home"><h1 style="color:white; text-decoration: none;">mckaymoore.</h1></a>
+            </div>
+            <div class="color-strips">
+                <div class="color-1"></div>
+                <div class="color-2"></div>
+                <div class="color-3"></div>
+                <div class="color-4"></div>
+            </div>
+           
+        </div>
+
+        <div class="navbar">
+            <a href="#technologies">technologies</a>
+            <a href="#projects">projects</a>
+            <a href="#contact">contact</a>
         </div>
 
         <!--Breaks inserted to add space between navbar and the first heading-->
@@ -24,30 +45,34 @@
         <br>
 
         <!--Background video-->
-        <div id="Home">
-            <video autoplay muted loop id="Typing_Video">
-                <source src="images/video/Typing.mp4" type="video/mp4">
+        <div id="home" class="video-div">
+            <video autoplay muted loop id="background-video">
+                <source src="images/video/star_burst_2.mp4" type="video/mp4">
                 <!--Display message if video fails to run-->
                 Your browser does not support HTML5 video.
             </video>
+            <script>
+                var vid = document.getElementById("background-video");
+                vid.playbackRate = 0.5;
+            </script>
         </div>
 
-        <!--Video text-->
-        <div class="Video_Text">
-            <h1 class="white-text">Your Name's Portfolio</h1>
-            <strong>
-                <p class="center">
-                    <q>The computer programmer is a creator of universes for which he alone is the lawgiver.
-                        <br>No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or
-                        <br>field of battle and to command such unswervingly dutiful actors or troops.
+        
+
+        <!--Video text-->   
+        <div class="video-text">
+            
+                <p class="quote white-text center">
+                    You either learn your way towards writing your own script in life, <br>
+                         or you unwittingly become an actor in someone else's script.
                     </q>
-                    <br> -Joseph Weizenbaum
+                    <br> - John Taylor Gatto
                     <br>
-                    <br> My name is ____. Welcome to my portfolio website. On it, I will tell you about my background and experience.
                     <br>
-                    <br> Thank you for stopping by and enjoy! 
+                    <br>
+                    <br> 
                 </p>
-            </strong>
+    
         </div>
 
         <!--About section-->
@@ -87,7 +112,7 @@
         </div>
 
         <!--Contact section-->
-        <div class="Row" id="Contact">
+        <div class="Row" id="contact">
             <!--Contact image, left column-->
             <div class="Column_2 Column_tall">
                 <img src="images/html_custom.png" alt="Contact_Image">
