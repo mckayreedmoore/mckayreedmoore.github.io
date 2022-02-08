@@ -1,7 +1,7 @@
 /***** GENERAL STYLING *****/
 /* Body */
 body {
-    margin: 0%  /* This ensures our site displays all the way to the edge of the browser screen */
+    margin: 0%  /* This ensures the site displays all the way to the edge of the browser screen */
 }
 
 /* Heading 1 elements */
@@ -14,6 +14,7 @@ h1 {
 
 .quote {
     font-family: 'Source Code Pro', monospace;
+    padding-top: 150px;
 }
 
 /* Styling for portfolio title text */
@@ -207,14 +208,20 @@ a:hover, a:visited, a:link, a:active {
 /***** END OF NAVBAR STYLING *****/
 
 /***** VIDEO STYLING *****/
+
+
+
 /* Formatting for background video */
 #background-video {
     position: fixed; /* This fixes the video to the page */
     right: 0; /* This ensures there is no space between the edge of the video and the edge of the page */
     bottom: 0; /* This ensures no space between the bottom of the video and the bottom of the page */
     min-width: 100%; /* This ensures the video is displayed across the full width of the page */
+    min-height: 100%;
     z-index: -1; /* This places the video behind the other elements on the page */
 }
+
+
 
 /* Screens that are 576px and smaller will not display the background video */
 @media screen and (max-width: 576px) {
@@ -230,6 +237,7 @@ a:hover, a:visited, a:link, a:active {
     background: rgba(0, 0, 0, 0.9); /* This provides a semi-transparent background for the text to sit over */
     color: white; /* Makes the font color white */
     width: 100%; /* Ensures the video-text container fills the width of the video */
+    height: 580px; /* this allows for the video to take up the entire rest of the screen on page load */
     padding: 20px; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
     padding-top:100px;
