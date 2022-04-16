@@ -15,6 +15,7 @@ h1 {
 .quote {
     font-family: 'Source Code Pro', monospace;
     padding-top: 150px;
+    font-size: 30px
 }
 
 /* Styling for portfolio title text */
@@ -236,7 +237,7 @@ a:hover, a:visited, a:link, a:active {
     height: 100vh; /* this allows for the video to take up the entire rest of the screen on page load */
     padding: 20px; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
-    padding-top: 15%;
+    padding-top: 28vh;
     
 }
 
