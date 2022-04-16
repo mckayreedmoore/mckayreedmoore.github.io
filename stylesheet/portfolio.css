@@ -337,6 +337,16 @@ input[type=submit]:hover {
     transition: transform 1.5s; /* Makes the transform effect last 1.5 seconds */
 }
 
+/* Contact div */
+#contact {
+    background-color: white;
+    padding-top: 20px;
+    height: 85vh;
+}
+
+
+/* end contact div*/
+
 /* Form element */
 form {
     border-radius: 5px; /* Rounds the corners of the contact form */
