@@ -109,6 +109,7 @@ footer {
 }
 a:hover, a:visited, a:link, a:active {
     text-decoration: none;
+    color:black;
     
 }
 .page-title {
@@ -147,14 +148,14 @@ a:hover, a:visited, a:link, a:active {
 .navbar {
     overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
     position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
-    top: 50px; 
-    width: 100%; /* This makes the navbar span the entire width of the page */
+    top: 50px;
+    /*width: 100%;  This makes the navbar span the entire width of the page */
     z-index: 1; /* This ensures other elements don't display over the navbar */
     -webkit-animation: move-nav .75s; /* This applies the moveNav animation below for Safari 4.0 - 8.0 */
     animation: move-nav 0s; /* This applies the moveNav animation for all other browsers */
     padding-top: 7px;
-
-   
+    background-color: rgba(0,0,0,.6);
+    padding-bottom: 7px;
 }
 
 
@@ -302,7 +303,7 @@ input[type=submit] {
     border-radius: 4px; /* Gives the submit button the same rounded corners as the text boxes */
     cursor: pointer; /* Changes the cursor to pointer when over the submit button */
     display: block; /* Allows the submit button to be centered */
-    margin-left: auto; /* In combination with "margin-right: auto" this will center the submit button */
+    margin-left: auto; /* In combination  "margin-right: auto" this will center the submit button */
     margin-right: auto;
     font-family: Perpetua, Rockwell Extra Bold;
 }
@@ -316,9 +317,10 @@ input[type=submit]:hover {
 /* Contact div */
 #contact {
     background-color: white;
-    height: 75vh;
+    height: 79vh;
     padding-top: 23px;
-    padding-bottom: 0px;
+    padding-bottom: 40px;
+    
 }
 /* end contact div*/
 
@@ -335,6 +337,19 @@ input[type=submit]:hover {
     
 }
 
+    .projectDescriptions li {
+        font-family: "Trebuchet MS", Optima;
+        text-align: justify; 
+        letter-spacing: 1px; 
+        font-size: 15px;
+        padding-left: 20px; 
+        padding-right: 20px; 
+        margin-bottom: 10px;
+    }
+
+.projectDescriptions div {
+    margin-top: 25px;
+}
 #technologies {
     height: 100vh;
     background-color: #f2f2f2;
