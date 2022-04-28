@@ -47,7 +47,7 @@ q {
     font-style: italic; /* This makes the quote italicized */
 }
 
-/* Image elements */
+/* Image elements */ 
 img {
     filter: grayscale(75%); /* This rids our pictures of 75% of their color */
     border-radius: 8px; /* Gives all images slightly rounded corners */
@@ -57,6 +57,9 @@ img {
     margin-left: auto; /* In combination with "margin-right: auto" this centers all images */
     margin-right: auto;
 }
+
+
+
 
 
 
@@ -106,7 +109,7 @@ footer {
 }
 a:hover, a:visited, a:link, a:active {
     text-decoration: none;
-    color: black;
+    
 }
 .page-title {
     color:white;
@@ -237,7 +240,7 @@ a:hover, a:visited, a:link, a:active {
     height: 100vh; /* this allows for the video to take up the entire rest of the screen on page load */
     padding: 20px; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
-    padding-top: 28vh;
+    padding-top: 17vh;
     
 }
 
@@ -253,36 +256,14 @@ a:hover, a:visited, a:link, a:active {
     box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
 } 
 
-.Column_1 {
-    float: left;
-    width: 50%; /* This ensures the column takes up half of the page width */
-    padding: 10px;
-    padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
-    height: 400px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
-    background-color: #f2f2f2; /* Sets the background color of the columns with class Column_1 */
-}
 
 /* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
 @media screen and (max-width: 576px) {
-    .Column_1 {
-        overflow: auto;
-    }
+    
 }
 
-.Column_2 {
-    float: left;
-    width: 50%;
-    padding: 10px;
-    padding-top: 1.9%;
-    height: 400px;
-    background-color: #4d4d4d;
-}
 
-/* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
-.Column_tall {
-    padding-top: 3.5%;
-    height: 450px;
-}
+
 
 /* This inserts something after the content of selected elements (in this case the elements with class "Row") */
 .Row:after {
@@ -330,20 +311,36 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: white; /* Turns the background of the submit button white when the user hovers over it */
     color: black; /* Turns the font black when hovered over */
-    transform: scale(1.5); /* Makes the button increase 1.5 times in size */
-    transition: transform 1.5s; /* Makes the transform effect last 1.5 seconds */
 }
 
 /* Contact div */
 #contact {
     background-color: white;
-    padding-top: 20px;
-    height: 85vh;
-    padding-top: 10%;
+    height: 75vh;
+    padding-top: 23px;
+    padding-bottom: 0px;
+}
+/* end contact div*/
+
+#projects {
+    height: 100vh;
+    background-color: #4d4d4d;
+    padding-top: 10px;
+    padding-bottom: 30px;
 }
 
+.projectDescriptions {
+    width:60%;
+    margin: auto;
+    
+}
 
-/* end contact div*/
+#technologies {
+    height: 100vh;
+    background-color: #f2f2f2;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
 
 /* Form element */
 form {
