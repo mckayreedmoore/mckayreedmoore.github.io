@@ -12,6 +12,12 @@ h1 {
    
 }
 
+h4 {
+    font-weight: 100;
+    font-family: 'Source Code Pro', monospace;
+    
+}
+
 .quote {
     font-family: 'Source Code Pro', monospace;
     padding-top: 150px;
