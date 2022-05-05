@@ -302,16 +302,24 @@ input[type=submit]:hover {
 /* end contact div*/
 
 #projects {
-    height: 100vh;
+    height: 115vh;
     background-color: #4d4d4d;
-    padding-top: 10px;
+    padding-top: 3px;
     padding-bottom: 30px;
 }
 
 .projectDescriptions {
     width:60%;
     margin: auto;
-    
+    margin-top: -30px;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.project Descriptions ul{
+    margin: 0;
 }
 
 .projectDescriptions li {
